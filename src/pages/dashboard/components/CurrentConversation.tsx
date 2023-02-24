@@ -1,5 +1,7 @@
 import React from 'react';
-import { Flex, Box, IconButton } from '@chakra-ui/react';
+import {
+  Flex, Box, IconButton, Container,
+} from '@chakra-ui/react';
 import { ArrowBackIcon } from '@chakra-ui/icons';
 import MessageInput from './MessageInput';
 import react from '../../../assets/react.svg';
@@ -25,6 +27,18 @@ const messages = [
   {
     userId: 'user123', userIcon: react, messageContent: 'hello, this is a message it has some more content and it is longaedg aedga edga edga edgiae dgaoed giajed o like super long', currentUser: true,
   },
+  {
+    userId: 'user123', userIcon: react, messageContent: 'hello, this is a message it has some more content and it is longaedg aedga edga edga edgiae dgaoed giajed o like super long', currentUser: true,
+  },
+  {
+    userId: 'user123', userIcon: react, messageContent: 'hello, this is a message it has some more content and it is longaedg aedga edga edga edgiae dgaoed giajed o like super long', currentUser: true,
+  },
+  {
+    userId: 'user123', userIcon: react, messageContent: 'hello, this is a message it has some more content and it is longaedg aedga edga edga edgiae dgaoed giajed o like super long', currentUser: true,
+  },
+  {
+    userId: 'user123', userIcon: react, messageContent: 'hello, this is a message it has some more content and it is longaedg aedga edga edga edgiae dgaoed giajed o like super long', currentUser: true,
+  },
 
 ];
 
@@ -40,6 +54,7 @@ export default function CurrentConversation(
       display={display}
       color="black"
       flexDir="column"
+      maxH="100%"
     >
       <Flex
         as="header"
@@ -68,16 +83,19 @@ export default function CurrentConversation(
       <Flex
         as="main"
         flex="1"
-        flexDir="column"
+        flexDir="column-reverse"
         gap="1.5rem"
         padding="1rem"
+        maxH="100%"
         overflow="auto"
       >
-        {messages.map((message) => (
-          <Message
-            message={message}
-          />
-        ))}
+        <Box>
+          {messages.map((message) => (
+            <Message
+              message={message}
+            />
+          ))}
+        </Box>
       </Flex>
       <MessageInput />
     </Flex>

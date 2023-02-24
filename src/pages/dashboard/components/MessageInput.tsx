@@ -25,6 +25,7 @@ function MessageInput() {
           colorScheme="teal"
         >
           <InputLeftAddon
+            // eslint-disable-next-line react/no-children-prop
             children={<AttachmentIcon />}
             cursor="pointer"
           />

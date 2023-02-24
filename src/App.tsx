@@ -4,7 +4,6 @@ import './global.css';
 function App() {
   return (
     <div className="App">
-      hello
       <Dashboard />
     </div>
   );

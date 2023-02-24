@@ -7,6 +7,7 @@ export default function Message({ message }) {
       maxW="40%"
       ml={message.currentUser ? 'auto' : ''}
       mr={message.currentUser ? '' : 'auto'}
+      mb="1.2rem"
     >
       <Flex
         width="100%"

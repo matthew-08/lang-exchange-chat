@@ -29,14 +29,14 @@ export default function Dashboard() {
       as="main"
       justifyContent="center"
       align="center"
-      minH="100vh"
-      minW="100%"
+      height="100vh"
     >
 
       <Flex
         as="section"
         minW={['97%', '97%', '97%', '97%', '80%']}
         minH="80vh"
+        maxH="80vh"
         background="white"
       >
         <Sidebar
@@ -46,6 +46,7 @@ export default function Dashboard() {
           as="section"
           flex="1"
           background="white"
+          maxH="100%"
         >
           {currentActiveView()}
         </Flex>

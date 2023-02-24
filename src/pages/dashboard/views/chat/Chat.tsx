@@ -45,6 +45,7 @@ export default function Chat() {
     <Flex
       as="section"
       flex="1"
+      maxH="100%"
     >
       <VStack
        // Conversations side-panel
