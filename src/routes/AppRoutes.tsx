@@ -2,7 +2,7 @@ import React from 'react';
 import {
   BrowserRouter as Router, Routes, Route, Link,
 } from 'react-router-dom';
-import Register from '../pages/homepage/Register';
+import Register from '../pages/homepage/components/RegisterForm';
 import SignIn from '../pages/homepage/SignIn';
 
 export default function AppRoutes() {

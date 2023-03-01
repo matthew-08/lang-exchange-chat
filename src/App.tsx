@@ -10,8 +10,7 @@ function App() {
       <Flex
         as="main"
         justify="center"
-        align="center"
-        height="100vh"
+        minH="100vh"
         background="#232545"
       >
         <AppRoutes />
