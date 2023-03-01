@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import {
-  VStack, Flex, IconButton, Image, Text, HStack,
+  VStack, Flex, Text, HStack, Circle,
   useMediaQuery,
+  Heading,
 } from '@chakra-ui/react';
-import react from '../../../../assets/react.svg';
 import Conversation from '../../components/Conversation';
 import CurrentConversation from '../../components/CurrentConversation';
 
@@ -55,9 +55,24 @@ export default function Chat() {
         borderColor="gray.500"
         borderRight="2px solid"
         padding="1rem"
-        color="black"
         display={isSmallerThan700 ? getViewStatus('allConversations') : 'flex'}
       >
+        <HStack
+          mr="auto"
+        >
+          <Heading
+            fontSize="2xl"
+          >
+            Messages
+          </Heading>
+          <Circle
+            background="red.400"
+            size="30px"
+            fontWeight="bold"
+          >
+            <Text>12</Text>
+          </Circle>
+        </HStack>
         <Conversation
           chooseConversation={chooseConversation}
         />

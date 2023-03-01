@@ -14,6 +14,7 @@ export default function Conversation({ chooseConversation }) {
       borderRadius="10px"
       overflow="hidden"
       onClick={() => chooseConversation()}
+      backgroundColor="#2d3055"
     >
       <IconButton
         aria-label="user-profile"

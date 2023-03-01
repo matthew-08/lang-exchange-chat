@@ -35,9 +35,10 @@ export default function Dashboard() {
       <Flex
         as="section"
         minW={['97%', '97%', '97%', '97%', '80%']}
-        minH="80vh"
+        minH={{ base: '90%', md: '80%' }}
         maxH="80vh"
-        background="white"
+        background="#232545"
+        borderRadius="10px"
       >
         <Sidebar
           switchView={switchView}
@@ -45,7 +46,6 @@ export default function Dashboard() {
         <Flex
           as="section"
           flex="1"
-          background="white"
           maxH="100%"
         >
           {currentActiveView()}

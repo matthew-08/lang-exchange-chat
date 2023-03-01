@@ -11,7 +11,7 @@ export default function Message({ message }) {
     >
       <Flex
         width="100%"
-        backgroundColor={message.currentUser ? 'blue.100' : 'gray.100'}
+        backgroundColor={message.currentUser ? 'blue.400' : 'gray.200'}
         padding="1rem"
         borderRadius="10px"
       >

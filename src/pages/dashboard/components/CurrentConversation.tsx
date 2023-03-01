@@ -52,7 +52,6 @@ export default function CurrentConversation(
       as="main"
       flex="1"
       display={display}
-      color="black"
       flexDir="column"
       maxH="100%"
     >
