@@ -7,16 +7,7 @@ import { Flex } from '@chakra-ui/react';
 function App() {
   return (
     <div className="App">
-      <Flex
-        as="main"
-        justify="center"
-        minH="100vh"
-        background="#232545"
-      >
-        <AppRoutes />
-
-      </Flex>
-      {/* <Dashboard /> */}
+      <AppRoutes />
     </div>
   );
 }

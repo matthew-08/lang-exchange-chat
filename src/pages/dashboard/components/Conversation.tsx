@@ -2,6 +2,7 @@ import {
   Flex, IconButton, VStack, Text, Image, Container,
 } from '@chakra-ui/react';
 import react from '../../../assets/react.svg';
+import IMAGES from '../../../images';
 
 export default function Conversation({ chooseConversation }) {
   const conversationId = '123';
@@ -15,22 +16,30 @@ export default function Conversation({ chooseConversation }) {
       overflow="hidden"
       onClick={() => chooseConversation()}
       backgroundColor="#2d3055"
+      align="center"
+      cursor="pointer"
     >
       <IconButton
         aria-label="user-profile"
         minWidth={{ '2xl': '50px', xl: '30px' }}
         minHeight={{ '2xl': '50px', xl: '30px' }}
-        border="2px"
-        borderRadius="50%"
-        borderColor="black"
+        background="none"
         mr="0.4rem"
-        icon={<Image src={react} width="100%" />}
+        icon={(
+          <Image
+            src={IMAGES.guy}
+            boxSize="70px"
+            borderRadius="full"
+            border="4px"
+            borderColor="blue.400"
+          />
+)}
       />
       <VStack
         textAlign="left"
         align="flex-start"
         flex="1"
-        fontSize={['1rem', '0.8rem', '0.9rem', '0.9rem', '1rem']}
+        fontSize={['1rem', '0.8rem', '0.9rem', '0.9rem', '1.3rem']}
         overflow="hidden"
       >
         <Flex
@@ -39,9 +48,14 @@ export default function Conversation({ chooseConversation }) {
           minW="100%"
           overflow="hidden"
         >
-          <Text>Person</Text>
           <Text
-            fontSize="0.7rem"
+            fontWeight="bold"
+          >
+            Person
+
+          </Text>
+          <Text
+            fontSize="0.8rem"
           >
             4:24
           </Text>

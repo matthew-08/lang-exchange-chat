@@ -73,7 +73,6 @@ export default function Sidebar({ switchView }: Props) {
             />
 )}
           onClick={() => switchView('chat')}
-
         />
         <IconButton
           px="1rem"

@@ -2,6 +2,7 @@ import React from 'react';
 import {
   GridItem, Box, Image, VStack, HStack, Heading, Text, Circle, Flex,
 } from '@chakra-ui/react';
+import { ArrowRightIcon } from '@chakra-ui/icons';
 import IMAGES from '../../../../../images';
 import person from '../../../../../assets/person.webp';
 
@@ -16,6 +17,7 @@ export default function PersonCard() {
       padding={['0.5rem', '1rem']}
       position="relative"
       maxH="132px"
+      boxShadow="lg"
     >
       <Box
         position="relative"
@@ -82,6 +84,11 @@ export default function PersonCard() {
           <Image src={IMAGES.flags.china} w={['15px', '20px']} />
         </HStack>
       </VStack>
+      <ArrowRightIcon
+        position="absolute"
+        bottom="10px"
+        right="10px"
+      />
     </GridItem>
   );
 }
