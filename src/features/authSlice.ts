@@ -1,20 +1,23 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { useAnimationFrame } from 'framer-motion';
+// eslint-disable-next-line import/no-cycle
+import { RootState } from '../store';
+import { UserAuthSchema } from '../types/types';
 
 const initialState = {
   username: '', loggedIn: false, userId: null, userImg: null,
-};
-
-type UserSchema = typeof initialState;
+} as UserAuthSchema;
 
 const authReducer = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    setUser(state, action: PayloadAction<UserSchema>) {
+    setUser(state, action: PayloadAction<UserAuthSchema>) {
       state = action.payload;
     },
   },
 });
+export const { setUser } = authReducer.actions;
+
+export const getUser = (state: RootState) => state.authReducer;
 
 export default authReducer.reducer;

@@ -5,22 +5,28 @@ import {
 import Register from '../pages/homepage/components/RegisterForm';
 import SignIn from '../pages/homepage/SignIn';
 import Dashboard from '../pages/dashboard/Dashboard';
+import PrivateRoutes from './PrivateRoutes';
 
 export default function AppRoutes() {
   return (
     <Router>
       <Routes>
         <Route
-          path="/"
+          path="/signIn"
           element={<SignIn />}
         />
         <Route
           path="/register"
           element={<Register />}
         />
+
         <Route
-          path="/dashboard"
-          element={<Dashboard />}
+          path="/"
+          element={(
+            <PrivateRoutes>
+              <Dashboard />
+            </PrivateRoutes>
+          )}
         />
         <Route
           path="*"
