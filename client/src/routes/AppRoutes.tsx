@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter as Router, Routes, Route, Link,
+  BrowserRouter as Router, Routes, Route,
 } from 'react-router-dom';
 import Register from '../pages/homepage/components/RegisterForm';
 import SignIn from '../pages/homepage/SignIn';
@@ -21,13 +21,13 @@ export default function AppRoutes() {
         />
 
         <Route
-          path="/"
+          path="/chat"
           element={(
-            <PrivateRoutes>
-              <Dashboard />
-            </PrivateRoutes>
+            <PrivateRoutes />
           )}
-        />
+        >
+          <Route element={<Dashboard />} />
+        </Route>
         <Route
           path="*"
           element={<SignIn />}
